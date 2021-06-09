@@ -14,7 +14,7 @@ for(i=0;i<num;i++)
 {
 array[i]=word.nextInt();
 }
-System.out.println(""Enter the element of which you want to count number of occurrences:");
+System.out.println("Enter the element of which you want to count number of occurrences:");
 x=word.nextInt();
 for(i=0;i<num;i++)
 {
