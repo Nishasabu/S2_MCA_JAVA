@@ -8,7 +8,7 @@ public static void main(String args[])
      double total, percentage;
     Scanner op=new Scanner(System.in);
     
-    System.out.println("Enter marks of five subjects");
+    System.out.println("Enter marks of subject out of 100");
     System.out.print("Enter marks of subject1:");
     sub1=op.nextFloat();
     System.out.print("Enter marks of subject2:");

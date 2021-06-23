@@ -29,11 +29,11 @@ for(int i=0;i<p;i++)
  }
 }
 System.out.println("enter the elements of 2nd  matrix:");
-for(int k=0;k<r;k++)
+for(int i=0;i<r;i++)
 {
- for(int l=0;l<s;l++)
+ for(int j=0;j<s;j++)
  {
- array2[k][l]=x.nextInt();
+ array2[i][j]=x.nextInt();
  }
 }
  System.out.println("First Matrix:");

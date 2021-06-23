@@ -10,20 +10,19 @@ pcode=cod;
 pname=nam;
 price=prc;
 }
-void PriceLowest(float pr1,float pr2,float pr3,String nm1,String nm2,String nm3)
-{
+void PriceLowest(float pr1,float pr2,float pr3,String nm1,String nm2,String nm3){
 
 if(pr1<pr2 && pr1<pr3)
 {
-System.out.println("product name:"+nm1  +  "  price of the product: "+pr1);
+System.out.println("lowest price product name:"+nm1  +  "  price of the product: "+pr1);
 }
 else if(pr2<pr1 && pr2<pr3) 
 {
-System.out.println("product name:"+nm2  +  "  price of the product: "+pr2);
+System.out.println("lowest price product name:"+nm2  +  "  price of the product: "+pr2);
 }
 else if(pr3<pr2 && pr3<pr1)
 {
-System.out.println("product name: "+nm3  + "  price of the product: "+pr3); 
+System.out.println("lowest price product name: "+nm3  + "  price of the product: "+pr3); 
 }
 else
 {
