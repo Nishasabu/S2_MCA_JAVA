@@ -1,39 +1,86 @@
+import java.util.Arrays;
 import java.util.Scanner;
-public class Search_Element
+class Search_Element
 {
-    public static void main(String[] args) 
-    {
-        int n, x, flag = 0, i = 0;
-        Scanner s = new Scanner(System.in);
-        System.out.print("Enter no. of elements you want in array:");
-        n = s.nextInt();
-        int a[] = new int[n];
-        System.out.println("Enter all the elements:");
-        for(i = 0; i < n; i++)
-        {
-            a[i] = s.nextInt();
-        }
-        System.out.print("Enter the element you want to find:");
-        x = s.nextInt();
-        for(i = 0; i < n; i++)
-        {
-            if(a[i] == x)
-            {
-                flag = 1;
-                break;
-            }
-            else
-            {
-                flag = 0;
-            }
-        }
-        if(flag == 1)
-        {
-            System.out.println("Element found at position:"+(i + 1));
-        }
-        else
-        {
-            System.out.println("Element not found");
-        }
-    }
+public static void main(String args[]) 
+{ 
+Scanner s=new Scanner(System.in);
+int i,n,ch,flag=0;
+String search;
+System.out.print("enter the limit : ");
+n=s.nextInt();
+String str[]=new String[n];
+System.out.println("enter all the elements : ");
+for(i=0; i<n; i++)
+{
+str[i]=s.next();
 }
+do
+{
+System.out.println("\n***ARRAY ELEMENT SEARCH***");
+System.out.println("\n 1.Linearsearch\n 2.Binarysearch\n 3.Exit");
+System.out.println("\nenter your choice : " );
+ch=s.nextInt();
+switch(ch)
+{
+case 1:
+System.out.print("enter the element to be searched : ");
+ search=s.next();
+for(i=0; i<n; i++)
+{
+if(str[i].equals(search))
+{
+flag=1;
+break;
+}
+else
+{
+flag=0;
+}}
+if(flag==1)
+{
+System.out.println("element " +search+ " found at position "+(i)+" !!! ");
+}
+else
+{
+System.out.println("element not found!!!");
+}
+break;
+case 2:
+System.out.print("enter the element to be searched : ");
+ search=s.next();
+Arrays.sort(str);
+int searchIndex = binarySearch(str,search);
+ System.out.println(searchIndex != -1 ? str[searchIndex]+ " found at index "+searchIndex : "element not found !!!");
+ break;
+case 3:
+break;
+default:
+System.out.println("invalid option !!!");
+break;
+}
+} 
+while(ch!=3);
+}
+public static int binarySearch(String a[], String x) 
+{
+int low=0;
+int high=a.length-1;
+int mid;
+while (low<=high) 
+{
+mid=(low + high)/2;
+if (a[mid].compareTo(x)<0) 
+{
+low = mid + 1;
+} 
+else if (a[mid].compareTo(x)>0) 
+{
+high=mid-1;
+} 
+else 
+{
+return mid;
+}}
+return -1;
+}}
